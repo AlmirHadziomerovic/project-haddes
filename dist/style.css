@@ -66,7 +66,6 @@ a:active {
 }
 
 body {
-    margin:17px;
     padding-top: var(--navbar-height-mobile);
     background: linear-gradient(12deg, var(--base-bg-color) 0, var(--navbar-bg-color) 100%)fixed;
     color: var(var(--base-color));
@@ -82,8 +81,7 @@ body {
     margin-right:auto;
     padding-left: calc(var(--columns-gap) / 2);
     padding-right: calc(var(--columns-gap) / 2);
-    padding-right: 0;
-    padding-left: 0;
+
 }
 
 
@@ -457,6 +455,10 @@ input,
 }
 
 
+
+
+
+
 #page-header {
     display:flex;
     justify-content: center;
@@ -470,6 +472,8 @@ input,
     line-height: 1.4;
     text-align: center;
     position: relative;
+    flex-direction: column;
+    margin-top:-100px;
 }
 
 
@@ -505,25 +509,13 @@ input,
     
    
 }
-.post-item > .img-wrapper {
-    overflow: hidden;
-    
 
-}
-
-.post-item .img-wrapper > a:hover img {
-    transform: scale(1.1);
-    transition: all 0.3s;
-}
-.post-item .img-wrapper > a img {
-    transition: all 0.3s;
-}
 
 .post-item .content {
     background-color: #dddddd53;
     padding: 1em 5%;
-    
 }
+
 
 
 
@@ -534,29 +526,71 @@ input,
         justify-content: center;
         text-align: center;
         vertical-align: bottom;
-        margin-top:-150px;
+        margin-top:-80px;
         gap:1em;
         padding:1em;
         position:relative;
         z-index: 100;
     }
 
-   
+    .post-item > .img-wrapper {
+        overflow: hidden;
+        
+    
+    }
+    
+    .post-item .img-wrapper > a:hover img {
+        transform: scale(1.1);
+        transition: all 0.3s;
+    }
+    .post-item .img-wrapper > a img {
+        transition: all 0.3s;
+    }
+    
+    .post-item .content {
+        background-color: #dddddd53;
+        padding: 1em 5%;
+        
+    }
+    
 }
+
+
+
+.icon-three {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+    list-style: none;
+    padding:5em;
+    font-size: 1.5em;
+
+}
+
+.icon-three :first-child {
+    margin-bottom: 3em;
+}
+
+
+
+
+
 
 
 .budget {
     display:grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
-    background-color: #dddddd53;
+    background-color: #fefefe;
     gap: 1em;
     padding: 2em;
 
 
 }
 .budget h2 {
-    color:white;
+    color:rgb(1, 0, 0);
     text-decoration: underline;
 
 }
@@ -765,7 +799,7 @@ input,
 }
 
 
- .webseite-headline {
+ .webseiten-headline {
     color:var(--primary-color);
     text-decoration:underline;
     padding: 1em;
@@ -827,3 +861,11 @@ input,
     width: auto;
     z-index: 100000; /* Above WP toolbar. */
   }
+
+
+  .alignfull {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    max-width: 100vw;
+    width: 100vw;
+}
