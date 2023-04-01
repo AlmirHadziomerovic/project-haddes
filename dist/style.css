@@ -9,6 +9,36 @@
     --columns-gap:30px;
 
 }
+/* charmonman-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Charmonman';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/charmonman-v18-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('assets/fonts/charmonman-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('assets/fonts/charmonman-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('assets/fonts/charmonman-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('assets/fonts/charmonman-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('assets/fonts/charmonman-v18-latin-regular.svg#Charmonman') format('svg'); /* Legacy iOS */
+  }
+
+  /* charmonman-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Charmonman';
+    font-style: normal;
+    font-weight: 700;
+    src: url('assets/fonts/charmonman-v18-latin-700.eot'); /* IE9 Compat Modes */
+    src: url('assets/fonts/charmonman-v18-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('assets/fonts/charmonman-v18-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('assets/fonts/charmonman-v18-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('assets/fonts/charmonman-v18-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('assets/fonts/charmonman-v18-latin-700.svg#Charmonman') format('svg'); /* Legacy iOS */
+  }
+
+
+
 
 *,
 *::before,
@@ -422,7 +452,7 @@ input,
     cursor:pointer;
     border:none;
     border-radius: 25px;
-    background-color: grey;
+    background-color: rgb(0, 0, 0);
     color: var(--base-color);
 }
 
@@ -437,38 +467,80 @@ input,
     background-position: center;
     background-attachment: fixed;
     padding: 2.5 1.5em;
+    line-height: 1.4;
+    text-align: center;
+    position: relative;
 }
 
 
+#page-header .actions {
+    display: inline-block;
+    justify-content: center;
+}
+
+
+@media screen and (min-width: 850px) {
+    #page-header .actions {
+    position: absolute;
+    margin-right: 70%;
+    margin-top: 10em;
+
+   
+   
+}
+}
 
 #page-header h1 {
+  
     color:var(--primary-color);
-    font-size: 5rem;
+    font-size: 3rem;
+    font-family:'Charmonman';
+
+}
+@media screen and (min-width: 850px) {
+    #page-header h1 {
+        color:var(--primary-color);
+        font-size: 4rem;
+    }
+    
+   
+}
+.post-item > .img-wrapper {
+    overflow: hidden;
+    
+
 }
 
-
-
-.post-item {
-
-    margin: 1.5rem 0;
+.post-item .img-wrapper > a:hover img {
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+.post-item .img-wrapper > a img {
+    transition: all 0.3s;
 }
 
 .post-item .content {
     background-color: #dddddd53;
     padding: 1em 5%;
+    
 }
 
 
 
+
 @media screen and (min-width: 850px) {
-    .posts  {
+    .posts {
         display:flex;
         justify-content: center;
         text-align: center;
         vertical-align: bottom;
-        gap: 1em;
+        margin-top:-150px;
+        gap:1em;
+        padding:1em;
+        position:relative;
+        z-index: 100;
     }
-    
+
    
 }
 
