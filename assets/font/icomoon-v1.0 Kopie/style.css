@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
   src:
-    url('fonts/icomoon.ttf?x7bb40') format('truetype'),
-    url('fonts/icomoon.woff?x7bb40') format('woff'),
-    url('fonts/icomoon.svg?x7bb40#icomoon') format('svg');
+    url('fonts/icomoon.ttf?j5ggq9') format('truetype'),
+    url('fonts/icomoon.woff?j5ggq9') format('woff'),
+    url('fonts/icomoon.svg?j5ggq9#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,6 +26,9 @@
 
 .icon-three-vertical:before {
   content: "\e901";
+}
+.icon-arrow-long-right:before {
+  content: "\e903";
 }
 .icon-top:before {
   content: "\e902";
