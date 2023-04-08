@@ -489,7 +489,7 @@ input,
     justify-content: center;
     align-items:center;
     min-height: 100vh;
-    background-image: url(/assets/img/HADES\ LOGO\ 1\ Kopie-nebel\ Kopie-01.png);
+    background-image: url(/assets/img/HADES\ LOGO\ NEU-01.png);
     background-size:cover;
     background-position: center;
     background-attachment: fixed;
@@ -952,5 +952,34 @@ text {
     grid-gap: 1px;
     background-color: var(--base-color);
     border-right: solid 1px rgba(0, 0, 0, 0.222);
+}
+}
+
+
+.about {
+    text-align: center;
+    color:var(--base-color)
+}
+
+@media screen and (min-width: 768px) {
+    .about {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #eee;
+    color:black;
+}
+
+.about-img {
+    max-width: 50%;
+    width: auto;
+}
+}
+
+@media screen and (min-width: 768px) {
+
+.about-text {
+    padding-top:5%;
+    padding-right: 10%;
 }
 }
