@@ -164,7 +164,31 @@ body {
     margin:0;
     padding:0;
     list-style-type: none;
+    color:var(--base-color);
 }
+.sub-menu {
+    font-size: 1.2em;
+}
+
+
+
+
+
+@media screen and (min-width: 850px) {
+    .nav-menu,
+    .sub-menu {
+        margin:0;
+        padding:0;
+        list-style-type: none;
+        background-color: transparent;
+        color:black;
+        font-size: 1em;
+    }
+}
+
+
+
+
 
 @media screen and (min-width: 850px) {
     .nav-menu,
@@ -268,6 +292,7 @@ body {
     line-height: var(--navbar-height-mobile);
     padding:0;
 
+
     
 }
 
@@ -319,7 +344,7 @@ body {
         transform: translate(-50% 0);
     }
 
-    #nav-main .cub-menu a {
+    #nav-main .sub-menu a {
         display: block;
     }
 }
@@ -387,7 +412,6 @@ body {
 #nav-button-icon {
     display:block;
     position:relative;
-   transition: background-color 250ms ease-in-out;
    
 }
 
@@ -405,7 +429,7 @@ body {
     position: absolute;
     left:0;
     right:0;
-    transition: transform 250ms ease-in-out;
+
 
 
 }
@@ -416,28 +440,43 @@ body {
 
 #nav-button-icon::after {
     transform: translateY(12px);
+    
+
 }
 
 #nav-toggle {
     display:none;
+
+
+
 }
 #nav-toggle:checked ~#nav-button #nav-button-icon {
     background-color: transparent;
+
+
+
+
 }
 
 #nav-toggle:checked ~#nav-button #nav-button-icon:before {
     transform: rotate(-140deg);
+    
 }
 #nav-toggle:checked ~#nav-button #nav-button-icon:after {
     transform: rotate(140deg);
+    
+    
+
     
 }
 
 #nav-toggle:checked ~#nav-main {
     opacity:1;
     pointer-events: auto;
-}
 
+}
+/*Menü von oben einblenden
+*/
 
 
 h1 {
@@ -454,6 +493,7 @@ h1 {
 .content {
     width: 100%;
     height: auto;
+
 }
 .column-header-media {
     width: 100%;
@@ -489,7 +529,7 @@ input,
     justify-content: center;
     align-items:center;
     min-height: 100vh;
-    background-image: url(/assets/img/HADES\ LOGO\ NEU-01.png);
+    background-image: url(/assets/img/HADES\ LOGO\ 1NeuFoto-01.jpg);
     background-size:cover;
     background-position: center;
     background-attachment: fixed;
@@ -535,11 +575,12 @@ input,
    
 }
 
-
-.post-item .content {
+.posts .content {
     background-color: #dddddd53;
     padding: 1em 5%;
+
 }
+
 
 .content-headline {
     color:var(--base-color);
@@ -560,28 +601,31 @@ input,
         padding:1em;
         position:relative;
         z-index: 100;
+        box-shadow: 10px 20px 15px silver;
+	border-radius: 20px;
     }
 
     .post-item > .img-wrapper {
         overflow: hidden;
-        
-    
     }
     
     .post-item .img-wrapper > a:hover img {
         transform: scale(1.1);
-        transition: all 0.3s;
     }
 
     
     .post-item .img-wrapper > a img {
         transition: all 0.3s;
+
+
     }
-    
+  
+
     .post-item .content {
         background-color: #dddddd53;
         padding: 1em 5%;
-        overflow:hidden;
+
+
         
     }
 
@@ -849,11 +893,14 @@ text {
 .slider .headline {
     font-size: 25px;
     text-shadow:#444;
-
+    
 }
 
 
-
+.ideen {
+    box-shadow: 10px 20px 15px grey;
+	border-radius: 20px;
+}
 
 .blog {
     display:grid;
