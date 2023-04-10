@@ -322,21 +322,24 @@ body {
     #nav-main > li {
         position: relative;
         margin-left: 2em;
+
     }
 
     #nav-main .sub-menu {
         position: absolute;
         top: 100%;
-        left: 50%;
-        transform: translate(-50% -2em);
+        left: -50%;
         width: 200px;
         padding: 0 0.5em;
-        background-color: var(--base-color);
+        background-color: transparent;
         border-radius: 12px;
         opacity: 0;
         pointer-events: none;
         transition: opacity 200ms ease-in-out, transform 150ms linear;
+        font-size: 1.5em;
     }
+
+  
 
     #nav-main li:hover > .sub-menu {
         opacity: 1;
