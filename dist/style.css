@@ -207,12 +207,14 @@ body {
     background-color: rgba(0, 2, 8, 0.863);
     opacity:0;
     pointer-events: none;
-    transition: transform 400ms ease-in-out;
     overflow-y: auto;
     text-align: center;
     font-weight: 400;
-    font-weight:400;
+
 }
+
+
+
 
 
 
@@ -284,6 +286,7 @@ body {
 
 #nav-main a:active {
     background-color: white;
+    
 }
 
 #nav-main > li > a {
@@ -376,6 +379,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     margin:10px;
+    
 }
 @media screen and (min-width: 850px) {
     #nav-main .current-menu-parent > a {
@@ -431,6 +435,9 @@ body {
     position: absolute;
     left:0;
     right:0;
+    transition: all 1s;
+
+    
 
 
 
@@ -442,6 +449,7 @@ body {
 
 #nav-button-icon::after {
     transform: translateY(12px);
+    
     
 
 }
@@ -475,6 +483,9 @@ body {
 #nav-toggle:checked ~#nav-main {
     opacity:1;
     pointer-events: auto;
+
+    transform: translateY(0);
+    transition: all 1s;
 
 }
 /*Menü von oben einblenden
