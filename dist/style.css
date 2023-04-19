@@ -146,6 +146,10 @@ body {
     
 }
 }
+
+/*Logo anpassen an größen----------*/
+
+
 @media screen and (min-width: 850px) {
     #brand {
         height: calc(var(--navbar-height-desktop))
@@ -459,14 +463,9 @@ body {
 #nav-toggle {
     display:none;
 
-
-
 }
 #nav-toggle:checked ~#nav-button #nav-button-icon {
     background-color: transparent;
-
-
-
 
 }
 
@@ -476,20 +475,28 @@ body {
 }
 #nav-toggle:checked ~#nav-button #nav-button-icon:after {
     transform: rotate(140deg);
-    
-    
 
-    
 }
+#nav-main {
+    transform: translateY(-100%);
+    transition: all 1.5s;
 
+}
 #nav-toggle:checked ~#nav-main {
     opacity:1;
     pointer-events: auto;
-
     transform: translateY(0);
     transition: all 1s;
 
 }
+@media screen and (min-width: 850px) {
+    #nav-main {
+        transform: translateY(0);
+    
+    }
+
+}
+
 /*Menü von oben einblenden
 */
 
@@ -773,7 +780,8 @@ input,
    gap:7em;
 }
 #message {
-min-width:1000px}
+min-width:1000px;
+}
 }
 
 
@@ -938,6 +946,8 @@ min-width:1000px}
     box-shadow: 10px 20px 15px grey;
 	border-radius: 20px;
 }
+
+
 
 .blog {
     display:grid;
