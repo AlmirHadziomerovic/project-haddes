@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="no-js">
 
 <head>
     <meta charset="UTF-8" />
@@ -8,6 +8,7 @@
     <title>Haddes Web Design</title>
     <link rel="stylesheet" href="/dist/style.css" />
     <link rel="stylesheet" href="/assets/font/icomoon-v1.0 Kopie/style.css" />
+    <link rel="stylesheet" href="/assets/splide-4.1.3/dist/css/splide.min.css"> 
 </head>
 
 <body>
@@ -162,24 +163,55 @@
         </ul>
 
 
-        
+
         <h3 class="slider headline">Galerie</h3>
 
 
-        <section class="columns">
 
-                <figure class="column ideen">
-                    <img src="/assets/img/ideen.jpg">
-                </figure>
-                <figure class="column ideen">
-                    <img src="/assets/img/ideen.jpg">
-                </figure>
-                <figure class="column ideen">
-                    <img src="/assets/img/ideen.jpg">
-                </figure>
-      
-            </div>
-        </section>
+
+            <section class="columns splide">
+                <div class="splide__slider">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                               
+                                    <img src="/assets/img/ideen.jpg">
+                               
+                            </li>
+                            <li class="splide__slide">
+                              
+                                    <img src="/assets/img/kaffee.jpg">
+                            
+                            </li>
+                            <li class="splide__slide">
+                       
+                                    <img src="/assets/img/SEO.png">
+                            
+                            </li>
+                            <li class="splide__slide">
+                               
+                                <img src="/assets/img/ideen.jpg">
+                           
+                        </li>
+                        <li class="splide__slide">
+                          
+                                <img src="/assets/img/kaffee.jpg">
+                        
+                        </li>
+                        <li class="splide__slide">
+                   
+                                <img src="/assets/img/SEO.png">
+                        
+                        </li>
+
+                        </ul>
+                    </div>
+                </div>
+               
+            </section>
+
+
+     
 
         <ul class="icon-three">
             <li>
@@ -327,6 +359,37 @@
         </nav>
         <div class="copyright">&copy; Haddes</div>
     </footer>
-</body>
 
+
+</body>
+<script src="/assets/splide-4.1.3/dist/js/splide.min.js"></script>
+<script src="/dist/scripts.js></script>
+<script>
+ document.addEventListener( 'DOMContentLoaded', function() {
+                    var splide = new Splide( '.splide', {
+                        type: 'loop',
+                        drag: 'free',
+                        focus: 'center',
+                        perPage: 3,
+                        perMove: 1,
+                        mediaQuery: 'min',
+                        gap: '15px',
+                        pagination: true,
+                        speed: number =1,
+                        breakpoints: {
+                            580: {
+                                perPage: 2
+                            },
+                            768: {
+                                perPage: 3
+                            },
+                            1200: {
+                                gap: '30px'
+                            }
+                        }
+                       
+                    } )
+                    splide.mount()
+                } )
+  </script>
 </html>
