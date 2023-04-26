@@ -103,7 +103,7 @@ body {
     max-width: var(--container-max-width);
     margin-left:auto;
     margin-right:auto;
-    padding-left: calc(var(--columns-gap) / 2);
+    padding-left: calc(var(--columns-gap) / 5);
     padding-right: calc(var(--columns-gap) / 2);
 
 }
@@ -112,6 +112,8 @@ body {
 .columns > .column {
     margin-bottom: calc(var(--columns-gap));
 }
+
+/*Navigation*/
 #navbar {
     position:absolute;
     top:0;
@@ -124,8 +126,8 @@ body {
 
 #navbar .container {
     display:flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items:center;
+    justify-content:center;
     height: var(--navbar-height-mobile);
 }
 @media screen and (min-width: 850px) {
@@ -138,30 +140,30 @@ body {
 #brand {
     height:100%;
     width:auto;
+
+
 }
 @media screen and (min-width: 850px) {
     .logo {
-    margin-bottom: 1.5em;
-    margin-left: -9em;
-    
+    margin-bottom: 2.5em;
+   
+
 }
 }
 
-/*Logo anpassen an größen----------*/
 
 
 @media screen and (min-width: 850px) {
     #brand {
-        height: calc(var(--navbar-height-desktop))
+        height: calc(var(--navbar-height-desktop));
+
     }
 }
 
-#brand img {
-    height: 100%;
-    width:auto;
-}
+
 
 #brand img:not([src$=svg]) {
+    height:100%;
     width: auto;
 }
 
@@ -376,7 +378,6 @@ body {
 
 
 
-
 #nav-button {
     width: var(--navbar-height-mobile);
     height: var(--navbar-height-mobile);
@@ -433,6 +434,7 @@ body {
     }
 }
 
+/*3 Striche beim Button*/
 
 #nav-button-icon::before,
 #nav-button-icon::after {
@@ -442,10 +444,6 @@ body {
     left:0;
     right:0;
     transition: all 1s;
-
-    
-
-
 
 }
 #nav-button-icon::before {
@@ -503,6 +501,7 @@ body {
 
 h1 {
     color: var(--base-color);
+    font-family:'Charmonman';
 
 
 }
@@ -522,6 +521,8 @@ h1 {
     height: auto;
 }
 
+
+/*Button Stylen*/
 button,
 input,
 .btn {
@@ -545,7 +546,7 @@ input,
 
 
 
-
+/*BG Image*/
 #page-header {
     display:flex;
     justify-content: center;
@@ -580,6 +581,34 @@ input,
     margin-top:-100px;
 }
 
+@media screen and (min-width: 650px) {
+    #page-header h1,
+    #page-header1 h1{
+        color:grey;
+        font-size: 3rem;
+        font-family:'Charmonman';
+
+    }
+
+#page-header1 {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    min-height: 90vh;
+    background-image: url(/assets/img/HADES\ LOGO\ 1NeuFoto-01.jpg);
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 2.5 1.5em;
+    line-height: 1.4;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    margin-top:-100px;
+}
+
+}
+
 
 
 
@@ -595,21 +624,17 @@ input,
     position: absolute;
     margin-right: 70%;
     margin-top: 10em;
-
-   
-   
 }
 }
 
 #page-header h1 {
   
     color:var(--base-color);
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family:'Charmonman';
     text-decoration: underline;
     text-decoration-color: #eeeeee29;
   
-
 }
 
 
@@ -624,8 +649,16 @@ input,
         font-family:'Charmonman';
 
     }
-    
-   
+
+}
+@media screen and (min-width: 650px) {
+    #page-header h1,
+    #page-header1 h1{
+        color:grey;
+        font-size: 3rem;
+        font-family:'Charmonman';
+    }
+
 }
 
 .posts .content {
@@ -642,7 +675,7 @@ input,
 }
 
 
-
+/*Posts Container Budget*/
 @media screen and (min-width: 850px) {
     .posts {
         display:flex;
@@ -788,7 +821,7 @@ min-width:1000px;
 }
 
 
-
+/*ToTop Button Stylen*/
 #totop {
     background-color:var(--primary-color);
     right:20px;
@@ -807,6 +840,10 @@ min-width:1000px;
     color:white;
 }
 
+#totop.show {
+    opacity:1;
+    pointer-events: auto;
+}
 
 
 
@@ -893,9 +930,14 @@ min-width:1000px;
     display:flex;
     justify-content: left;
     flex-direction: row-reverse;
+    padding:2em;
+    
     
 }
 
+/*Zwischenabstand in farbe*/
+
+/*Webseite/Wordpress Startseite*/
 .post-item1 {
     display: flex;
     justify-content: left;
@@ -912,9 +954,7 @@ min-width:1000px;
     color:var(--base-color);
     text-align: right;
 }
-.webseitesn-text {
-    color:var(--base-color);
-}
+
 
 .grid-container{
     display:grid;
@@ -937,21 +977,14 @@ min-width:1000px;
       
 }
 
-
+/*Galerie Headline*/
 .slider .headline {
     font-size: 25px;
     text-shadow:#444;
     
 }
 
-
-.ideen {
-    box-shadow: 10px 20px 15px grey;
-	border-radius: 20px;
-}
-
-
-
+/*Blog Grid Container*/
 .blog {
     display:grid;
     grid-template-columns: 1fr;
@@ -963,7 +996,7 @@ min-width:1000px;
 
 
 
-
+/*Blog Abtrennungen fixieren*/
 
 @media screen and (min-width: 768px) {
 .blog {
@@ -973,6 +1006,9 @@ min-width:1000px;
     padding:1em;
     
 }
+
+
+
 .blog-content1,
 .blog-content2,
 .blog-content4,
@@ -989,7 +1025,6 @@ min-width:1000px;
 }
 }
 
-/*Blog Abtrennungen fixieren*/
 
 
 
@@ -1099,3 +1134,6 @@ min-width:1000px;
     transition: opacity 400ms linear, transform 400ms linear;
 
 }
+
+
+

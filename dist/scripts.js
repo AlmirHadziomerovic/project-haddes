@@ -1,15 +1,10 @@
-/*Funktion zur Prüfung der unterstützung "JS" */
 
-function jsLoaded(){
-    const htmlTag = document.querySelectorAll('html')
-    htmlTag.classList.remove('no-js')
-    htmlTag.classList.add('js')
-}
+
 
 /*To Top Button Ausblenden ab ca. 300px */
-function showToTop (){
+function toTopButton (){
     const toTopButton = document.getElementById('totop')
-    if ( window.scrollY > 300 ) {
+    if ( window.scrollY > 250 ) {
         toTopButton.classList.add('show')
     } else {
         toTopButton.classList.remove ('show')
@@ -22,4 +17,11 @@ document.getElementById('totop').addEventListener('click',function(){
     document.body.scrollTop = 0
     document.documentElement.scrollTop = 0
 })
-console.log('getElementById')
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    toTopButton()
+
+    console.log(window.scrollY)
+
+}, false ) 
