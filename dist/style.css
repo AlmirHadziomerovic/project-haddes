@@ -1,7 +1,7 @@
 :root {
     --base-bg-color: #255991;
     --base-color: #ffffff;
-    --navbar-bg-color: rgba(0, 0, 0, 0);
+    --navbar-bg-color: rgb(0, 0, 0);
     --primary-color: #00c0ff;
     --navbar-height-mobile:60px;
     --navbar-height-desktop: 80px;
@@ -9,6 +9,12 @@
     --columns-gap:30px;
 
 }
+
+::selection {
+    background-color: #00c0ff;
+    color:#eee,
+}
+
 /* charmonman-regular - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -308,6 +314,7 @@ body {
     line-height: var(--navbar-height-desktop);
     padding-right: 1px;
     right: 10px;
+    
    
 }
 }
@@ -315,6 +322,8 @@ body {
 #nav-main .current-menu-item >a {
     color: var(--primary-color);
 }
+
+
 
 @media screen and (min-width: 850px) {
     #nav-main .current-menu-parent >a {
@@ -351,6 +360,7 @@ body {
         opacity: 1;
         pointer-events: auto;
         transform: translate(-50% 0);
+        
     }
 
     #nav-main .sub-menu a {
@@ -536,9 +546,16 @@ input,
     border-radius: 25px;
     background-color: rgb(0, 0, 0);
     color: var(--base-color);
+    transition: 0.7s ease-in-out;
+   
 }
 
+.btn:hover {
+    background-color:#00c0ff;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px 0 #00c0ff inset, 0 0 10px 8px #00c0ff;
 
+}
 
 /*BG Image*/
 #page-header {
@@ -612,6 +629,8 @@ input,
 }
 
 
+
+
 @media screen and (min-width: 850px) {
     #page-header .actions,
     #page-header1 .actions {
@@ -620,6 +639,7 @@ input,
     margin-top: 10em;
 }
 }
+
 
 #page-header h1 {
   
@@ -746,13 +766,14 @@ input,
     gap: 1em;
     padding: 2em;
     color: black;
-
-
 }
+
+
 .budget h2 {
     color:rgb(1, 0, 0);
     text-decoration: underline;
     font-size: 2rem;
+    line-height: 1.2em;
     
 
 }
@@ -984,6 +1005,7 @@ min-width:1000px;
     background-color: #eee;
     padding:1em;
     
+    
 }
 
 
@@ -1016,6 +1038,16 @@ min-width:1000px;
     margin-left:auto;
     margin-right: auto; 
 }
+}
+
+.blog-content1:hover,
+.blog-content2:hover,
+.blog-content4:hover,
+.blog-content5:hover,
+.blog-content3:hover,
+.blog-content6:hover {
+   background-color:#00bfff76;
+   transition: all 0.7s linear;
 }
 
 
@@ -1114,13 +1146,17 @@ min-width:1000px;
     background-color: #00c0ff;
 }
 
+.send:hover {
+    background-color: black;
+}
+
 
 /*Animierte h1,posts*/
 
 .js .animate {
     opacity: 0;
     transform: translateY(2rem);
-    transition: opacity 200ms linear transform 200ms linear;
+    transition: opacity 500ms linear transform 500ms linear;
     transition-delay: 200ms;
 }
 
